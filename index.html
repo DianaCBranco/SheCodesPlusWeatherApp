@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>WeatherApp Diana</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+    <script src="https://kit.fontawesome.com/8eb90982bd.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>
+            Welcome to
+            BetterOutside!
+        </h1>
+        <h2 class="currentDay" id="current-date">
+            Date
+        </h2>
+        <form id="search-city">
+            <div class="form-group">
+                <input type="search" class="form-control" id="city-input" placeholder="Search city..." />
+            </div>
+        </form>
+        <span class="icons-search">
+            </button>
+            <button id="current-location-button" class="btn btn-light">
+                <i class="fas fa-map-marker-alt" id="current-location-icon"></i>
+            </button>
+        </span>
+        <h4 class="city" id="city">
+            Cluj-Napoca
+        </h4>
+        <br />
+        <div class="row information">
+            <div class="col current-temperature">
+                <strong id="temperature-number">
+                    18º <a href="#" class="temp-celsius" id="celsius">C</a> | <a href="#" class="temp-fahrenheit"
+                        id="fahrenheit">F</a>
+                </strong>
+            </div>
+            <div class="col today-icon">
+                <i class="fas fa-sun icon-sun"></i>
+            </div>
+            <ul class="col conditions">
+                <li>Feels like: <span id="feels-like"></span>º</li>
+                <li>Humidity: <span id="humidity"></span> km/h</li>
+                <li>Wind: <span id="wind"></span> km/h</li>
+            </ul>
+        </div>
+        <br>
+        <h3 class="weatherDescription" id="weather-description">
+            Clear
+        </h3>
+        <hr />
+        <br />
+        <div class="row next days">
+            <div class="col-1"></div>
+            <div class="col-2 ">
+                Fri
+            </div>
+            <div class="col-2 ">
+                Sat
+            </div>
+            <div class="col-2">
+                Sun
+            </div>
+            <div class="col-2 ">
+                Mon
+            </div>
+            <div class="col-2">
+                Tue
+            </div>
+            <div class="col-1"></div>
+        </div>
+        <div class="row next-days">
+            <br />
+            <div class="col-1"></div>
+            <div class="col-2">
+                <i class="fas fa-cloud friday"></i>
+            </div>
+            <div class="col-2">
+                <i class="fas fa-cloud-sun saturday"></i>
+            </div>
+            <div class="col-2">
+                <i class="fas fa-sun sunday"></i>
+            </div>
+            <div class="col-2">
+                <i class="fas fa-cloud-rain monday"></i>
+            </div>
+            <div class="col-2">
+                <i class="fas fa-cloud tuesday"></i>
+            </div>
+            <div class="col-1"></div>
+        </div>
+        <div class="row temperature-next">
+            <div class="col-1"></div>
+            <div class="col-2">
+                12 | 6
+            </div>
+            <div class="col-2">
+                18 | 4
+            </div>
+            <div class="col-2">
+                21 | 8
+            </div>
+            <div class="col-2">
+                11 | 4
+            </div>
+            <div class="col-2">
+                17 | 3
+            </div>
+            <div class="col-1"></div>
+        </div>
+    </div>
+    <br />
+    <script src="index.js"></script>
+    </div>
+</body>
+
+</html>

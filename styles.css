@@ -1,0 +1,73 @@
+h1 {
+  text-align: center;
+  font-size: 22px;
+  margin-top: 0px;
+  padding: 3px;
+}
+h3 {
+  text-align: right;
+  font-size: 13px;
+  padding: 1px;
+}
+
+ul {
+  list-style: none;
+}
+
+.icons-search {
+  position: relative;
+  left: 10px;
+}
+.city {
+  text-align: center;
+  padding: 0px;
+}
+.currentDay {
+  font-size: 15px;
+  padding: 6px;
+  margin: 5px;
+  position: relative;
+  left: 170px;
+}
+.weatherDescription {
+  font-size: 23px;
+  text-align: center;
+}
+.information {
+  padding-left: 20px;
+}
+.icon-sun {
+  font-size: 80px;
+  position: relative;
+  left: 15px;
+}
+.conditions {
+  font-size: 15px;
+  position: relative;
+  top: 10px;
+}
+.current-temperature {
+  font-size: 22px;
+  position: relative;
+  top: 20px;
+}
+
+.next-days {
+  font-size: 25px;
+}
+
+.container {
+  color: #1d3557;
+  margin: 30px auto;
+  box-shadow: 1px 5px 10px 0px rgba(170, 175, 209, 1);
+  max-width: 510px;
+  display: block;
+  border-radius: 15px;
+  padding: 15px;
+  background-image: linear-gradient(
+    to top,
+    #f3e7e9 0%,
+    #e3eeff 99%,
+    #e3eeff 100%
+  );
+}
