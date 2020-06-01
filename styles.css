@@ -56,6 +56,10 @@ ul {
   font-size: 25px;
 }
 
+.linkToSourceCode {
+  text-align: center;
+  font-size: 15px;
+}
 .container {
   color: #1d3557;
   margin: 30px auto;
