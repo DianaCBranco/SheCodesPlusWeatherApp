@@ -46,8 +46,13 @@ function displayCityNameandWeather(response) {
   );
   document.querySelector("#weather-description").innerHTML =
     response.data.weather[0].main;
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
-
 function getCityInfo(city) {
   let apiKeyCity = "98d4b83d6a6df781e514f7015a1ca27d";
   let apiUrlCity = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKeyCity}&units=metric`;
