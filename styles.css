@@ -43,7 +43,13 @@ ul {
   position: relative;
   left: 15px;
 }
-
+.units {
+  position: relative;
+  font-size: 20px;
+  top: -45px;
+  left: 40px;
+  padding-left: 2px;
+}
 .active {
   color: black;
   cursor: default;
@@ -58,15 +64,10 @@ ul {
   top: 10px;
 }
 .current-temperature {
-  font-size: 22px;
+  font-size: 30px;
   position: relative;
   top: 20px;
 }
-
-.next-days {
-  font-size: 25px;
-}
-
 .linkToSourceCode {
   text-align: center;
   font-size: 15px;
@@ -79,10 +80,5 @@ ul {
   display: block;
   border-radius: 15px;
   padding: 15px;
-  background-image: linear-gradient(
-    to top,
-    #f3e7e9 0%,
-    #e3eeff 99%,
-    #e3eeff 100%
-  );
+  background-image: linear-gradient(to top, #fff1eb 0%, #daedf6 100%);
 }
