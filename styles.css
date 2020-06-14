@@ -43,6 +43,15 @@ ul {
   position: relative;
   left: 15px;
 }
+
+.active {
+  color: black;
+  cursor: default;
+}
+
+.active:hover {
+  text-decoration: none;
+}
 .conditions {
   font-size: 15px;
   position: relative;

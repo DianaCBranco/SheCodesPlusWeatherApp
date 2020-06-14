@@ -35,9 +35,10 @@ dateElement.innerHTML = getCurrentDate(currentDate);
 
 function displayCityNameandWeather(response) {
   document.querySelector("#city").innerHTML = response.data.name;
+  celsiusTemperature = response.data.main.temp;
   document.querySelector("#temperature-number").innerHTML = `${Math.round(
-    response.data.main.temp
-  )} º C | F`;
+    celsiusTemperature
+  )}; )}`;
   document.querySelector("#feels-like").innerHTML =
     response.data.main.feels_like;
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
@@ -87,6 +88,37 @@ function getCurrentLocation(event) {
 //Current Location Button
 let currentLocation = document.querySelector("#current-location-button");
 currentLocation.addEventListener("click", getCurrentLocation);
+
+//On load Temperature
+let celsiusTemperature = null;
+
+/// Converting Temperature to Fahrenheit
+function displayFahrenheitTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature-number");
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+  //Remove the active class from the celsius link - it only shows the other temperature as a link and not both at the same time
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+}
+
+/// Converting Temperature back to Celsius
+function displayCelsiustTemperature(event) {
+  event.preventDefault();
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  let temperatureElement = document.querySelector("#temperature-number");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
+//Click to Convert to fahrenheit
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+//Click to Convert back to celsius
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsiustTemperature);
 
 //On load
 getCityInfo("Lisbon");

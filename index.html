@@ -22,7 +22,7 @@
         </h2>
         <form id="search-city">
             <div class="form-group">
-                <input type="search" class="form-control" id="city-input" placeholder="Search city..." autocomplete="off" />
+                <input type="search" class="form-control" id="city-input" placeholder="Search city..." autocomplete="off" class="btn btn-primary w-100" />
             </div>
         </form>
         <span class="icons-search">
@@ -38,9 +38,12 @@
         <div class="row information">
             <div class="col current-temperature">
                 <strong id="temperature-number">
-                    18º <a href="#" class="temp-celsius" id="celsius">C</a> | <a href="#" class="temp-fahrenheit"
-                        id="fahrenheit">F</a>
-                </strong>
+                    18 
+                    </strong>
+                    <div class="units">
+                    <a href="#" class="temp-celsius" class ="active" id="celsius-link">°C</a> | 
+                    <a href="#" class="temp-fahrenheit"id="fahrenheit-link">°F</a>
+            </div>
             </div>
             <div class="col today-icon">
                 <img src="" alt="Clear" id="icon"/>
