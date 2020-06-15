@@ -38,10 +38,24 @@ ul {
 .information {
   padding-left: 20px;
 }
-.icon-sun {
-  font-size: 80px;
+
+.weather-forecast-temperature {
+  text-align: center;
+  margin: 0 auto;
+  color: #1d3557;
+  font-size: 13px;
+  font-weight: 400;
+}
+#hours {
+  text-align: center;
   position: relative;
-  left: 15px;
+  left: 100px;
+}
+.icon-forecast {
+  display: block;
+  margin: 0 auto;
+  height: 48px;
+  width: 48px;
 }
 .units {
   position: relative;

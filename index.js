@@ -1,7 +1,23 @@
 /// Display current time and hour
 
-//Get current time
-function getCurrentDate(date) {
+//Get current hours
+function formatHours(time) {
+  let date = new Date(time);
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+
+  return `${hours}:${minutes}`;
+}
+
+//Get current date - days and call function for hours
+function getCurrentDate(time) {
+  let date = new Date(time);
   let hours = date.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
@@ -22,8 +38,7 @@ function getCurrentDate(date) {
     "Saturday",
   ];
   let day = days[dayIndex];
-
-  return `${day} ${hours}:${minutes}`;
+  return `${day} ${formatHours(time)}`;
 }
 
 //Display current date
@@ -31,20 +46,7 @@ let dateElement = document.querySelector("#current-date");
 let currentDate = new Date();
 dateElement.innerHTML = getCurrentDate(currentDate);
 
-//Hours
-function formatHours(timestamp) {
-  let date = new Date(timestamp);
-  let hours = date.getHours();
-  if (hours < 10) {
-    hours = `0${hours}`;
-  }
-  let minutes = date.getMinutes();
-  if (minutes < 10) {
-    minutes = `0${minutes}`;
-  }
-  return `${hours}:${minutes}`;
-}
-/// Display City name and Weather Conditions with input and when searching
+// Display City name and Weather Conditions with input and when searching
 
 function displayCityNameandWeather(response) {
   document.querySelector("#city").innerHTML = response.data.name;
@@ -70,22 +72,29 @@ function displayCityNameandWeather(response) {
 //Display Forecast for the next hours
 function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
-  let forecast = response.data.list[0];
-  forecastElement.innerHTML = `
-  <div class="col-2" >
+  forecastElement.innerHTML = null;
+  let forecast = null;
+  for (let index = 0; index < 5; index++) {
+    forecast = response.data.list[index];
+    forecastElement.innerHTML += `
+    <div class="col-2">
       <h3>
+        ${formatHours(forecast.dt * 1000)}
       </h3>
-      <img 
-      src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png}"
+      <img
+        src="http://openweathermap.org/img/wn/${
+          forecast.weather[0].icon
+        }@2x.png"
       />
-      <div class = "col-2" class="weather-forecast-temperature">
+      <div class="weather-forecast-temperature">
         <strong>
           ${Math.round(forecast.main.temp_max)}°
         </strong>
         ${Math.round(forecast.main.temp_min)}°
       </div>
-      </div>
-`;
+    </div>
+  `;
+  }
 }
 function getCityInfo(city) {
   let apiKeyCity = "98d4b83d6a6df781e514f7015a1ca27d";
