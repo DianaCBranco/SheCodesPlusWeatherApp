@@ -12,7 +12,7 @@ h3 {
 
 ul {
   list-style: none;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
 }
 
@@ -23,6 +23,7 @@ ul {
 .city {
   text-align: center;
   padding: 0px;
+  margin: 0px;
 }
 .currentDay {
   font-size: 15px;
@@ -34,28 +35,32 @@ ul {
 .weatherDescription {
   font-size: 23px;
   text-align: center;
+  position: relative;
+  top: -20px;
 }
-.information {
+.hour-forecast {
+  margin: 0 auto;
+  text-align: center;
+  padding: 0px;
+  font-size: 14px;
+  color: #1d3557;
+  position: relative;
+  left: 30px;
+}
+.current-weather-information {
   padding-left: 20px;
 }
 
-.weather-forecast-temperature {
-  text-align: center;
-  margin: 0 auto;
-  color: #1d3557;
-  font-size: 13px;
-  font-weight: 400;
-}
-#hours {
-  text-align: center;
-  position: relative;
-  left: 100px;
-}
 .icon-forecast {
-  display: block;
-  margin: 0 auto;
-  height: 48px;
-  width: 48px;
+  position: relative;
+  left: -15px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.weather-forecast-temperature {
+  position: relative;
+  left: 10px;
 }
 .units {
   position: relative;
@@ -76,11 +81,13 @@ ul {
   font-size: 15px;
   position: relative;
   top: 10px;
+  left: -20px;
 }
 .current-temperature {
   font-size: 30px;
   position: relative;
   top: 20px;
+  left: 30px;
 }
 .linkToSourceCode {
   text-align: center;
@@ -88,11 +95,12 @@ ul {
 }
 .container {
   color: #1d3557;
-  margin: 30px auto;
+  margin: 10px auto;
   box-shadow: 1px 5px 10px 0px rgba(170, 175, 209, 1);
-  max-width: 510px;
+  max-width: 530px;
   display: block;
   border-radius: 15px;
   padding: 15px;
-  background-image: linear-gradient(to top, #fff1eb 0%, #daedf6 100%);
+  font-family: "Andika", sans-serif;
+  background-image: linear-gradient(to right, #ffc3a0 0%, #ffafbd 100%);
 }

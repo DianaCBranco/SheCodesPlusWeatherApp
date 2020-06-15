@@ -8,6 +8,7 @@
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
     <script src="https://kit.fontawesome.com/8eb90982bd.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Andika&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css" />
 </head>
 
@@ -35,7 +36,7 @@
             Cluj-Napoca
         </h4>
         <br />
-        <div class="row information">
+        <div class="row current-weather-information">
             <div class="col current-temperature">
                 <strong id="temperature-number">
                     18 
@@ -49,8 +50,8 @@
                 <img src="" alt="Clear" id="icon"/>
             </div>
             <ul class="col conditions">
-                <li>Feels like: <strong id="feels-like"></strong>º</li>
-                <li>Humidity: <strong id="humidity"></strong> km/h</li>
+                <li>Feels like: <strong id="feels-like"></strong>°</li>
+                <li>Humidity: <strong id="humidity"></strong> %</li>
                 <li>Wind: <strong id="wind"></strong> km/h</li>
             </ul>
         </div>
@@ -59,7 +60,7 @@
             Clear
         </h3>
         <hr />
-        <div class="row weather-forecast" id="forecast"></div>
+        <div class="row hour-forecast" id="forecast"></div>
     </section>
     </div>
     <footer class="linkToSourceCode">
