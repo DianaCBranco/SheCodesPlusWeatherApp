@@ -43,7 +43,7 @@ ul {
   text-align: center;
   padding: 0px;
   font-size: 14px;
-  color: #1d3557;
+  color: #48484a;
   position: relative;
   left: 30px;
 }
@@ -94,7 +94,7 @@ ul {
   font-size: 15px;
 }
 .container {
-  color: #1d3557;
+  color: #48484a;
   margin: 10px auto;
   box-shadow: 1px 5px 10px 0px rgba(170, 175, 209, 1);
   max-width: 530px;
