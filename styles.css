@@ -1,5 +1,12 @@
-h1 {
+h1,
+.city,
+.hour-forecast,
+.weatherDescription,
+.linkToSourceCode {
   text-align: center;
+}
+
+h1 {
   font-size: 22px;
   margin-top: 0 auto;
   padding: 3px;
@@ -21,7 +28,6 @@ ul {
   left: 10px;
 }
 .city {
-  text-align: center;
   padding: 0px;
   margin: 0px;
 }
@@ -34,13 +40,11 @@ ul {
 }
 .weatherDescription {
   font-size: 23px;
-  text-align: center;
   position: relative;
   top: -20px;
 }
 .hour-forecast {
   margin: 0 auto;
-  text-align: center;
   padding: 0px;
   font-size: 14px;
   color: #48484a;
@@ -90,7 +94,6 @@ ul {
   left: 30px;
 }
 .linkToSourceCode {
-  text-align: center;
   font-size: 15px;
 }
 .container {
